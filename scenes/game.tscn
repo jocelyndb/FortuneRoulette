@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://t3x020l7gp7i"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fthct"]
+[ext_resource type="PackedScene" uid="uid://cot5pwmhx8i3e" path="res://scenes/roulette_wheel.tscn" id="1_l7jvs"]
+[ext_resource type="PackedScene" uid="uid://ck66kuskhef63" path="res://scenes/ball.tscn" id="2_0dtfu"]
+[ext_resource type="PackedScene" uid="uid://b25hlxencnp0s" path="res://scenes/circle.tscn" id="2_31tv5"]
+[ext_resource type="Script" path="res://scripts/ball.gd" id="3_avks6"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="3_lu3gh"]
+
+[sub_resource type="Theme" id="Theme_eugf8"]
+
+[sub_resource type="FontVariation" id="FontVariation_i227m"]
+spacing_bottom = -71
+
+[sub_resource type="InputEventKey" id="InputEventKey_657yr"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_sh0ok"]
+events = [SubResource("InputEventKey_657yr"), null]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_fthct")
+
+[node name="Ball" parent="." instance=ExtResource("2_0dtfu")]
+unique_name_in_owner = true
+light_mask = 5
+visibility_layer = 5
+z_index = 15
+position = Vector2(0, 61)
+collision_layer = 7
+collision_mask = 7
+freeze = true
+script = ExtResource("3_avks6")
+landed = false
+
+[node name="Ball" parent="Ball" instance=ExtResource("2_31tv5")]
+z_index = 100
+radius = 5.0
+color = Color(1, 1, 1, 1)
+filled = true
+
+[node name="Roulette Wheel" parent="." instance=ExtResource("1_l7jvs")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6.25, 6.25)
+
+[node name="Button" type="Button" parent="."]
+z_index = 9
+clip_contents = true
+offset_right = 320.0
+offset_bottom = 193.0
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(-40, -24)
+size_flags_vertical = 8
+theme = SubResource("Theme_eugf8")
+theme_override_fonts/font = SubResource("FontVariation_i227m")
+theme_override_font_sizes/font_size = 231
+shortcut = SubResource("Shortcut_sh0ok")
+text = "SPIN"
+icon_alignment = 1
+script = ExtResource("3_lu3gh")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+monitoring = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+light_mask = 5
+visibility_layer = 5
+position = Vector2(3, 9)
+polygon = PackedVector2Array(64, -60, 79, -30, 72, 23, 52, 55, -4, 72, -58, 57, -87, 1, -72, -53, -35, -86, 29, -86, 64, -60, 72, -74, 30, -96, -55, -92, -101, -63, -109, 42, -64, 93, 6, 106, 54, 97, 73, 66, 101, 18, 83, -60, 73, -74)
+
+[connection signal="just_landed" from="Ball" to="Roulette Wheel" method="_on_ball_just_landed"]
+[connection signal="spinning" from="Roulette Wheel" to="Ball" method="_on_roulette_wheel_spinning"]
+[connection signal="stopped" from="Roulette Wheel" to="Ball" method="_on_roulette_wheel_stopped"]
+[connection signal="stopped" from="Roulette Wheel" to="Button" method="_on_roulette_wheel_stopped"]
+[connection signal="pressed" from="Button" to="Roulette Wheel" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
