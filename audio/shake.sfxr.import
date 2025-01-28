@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://d2fl66c41r0fj"
+path="res://.godot/imported/shake.sfxr-82c757c8b730745f9af23214d7b8b71d.sample"
+
+[deps]
+
+source_file="res://audio/shake.sfxr"
+dest_files=["res://.godot/imported/shake.sfxr-82c757c8b730745f9af23214d7b8b71d.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

@@ -15,3 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		ball.linear_damp *=1.1
 		ball.linear_damp = max(ball.linear_damp, 0.6)
+
+#func _on_body_exited(body: Node2D) -> void:
+	#await get_tree().create_timer(1).timeout

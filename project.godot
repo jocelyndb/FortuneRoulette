@@ -13,17 +13,26 @@ config_version=5
 config/name="Fortune Roulette"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+boot_splash/bg_color=Color(0.00392157, 0.00392157, 0, 1)
+boot_splash/image="res://textures/Linux_command-line._Bash._GNOME_Terminal._screenshot.png"
 config/icon="res://textures/roulette-bar.png"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://textures/cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdfxr/plugin.cfg")
 
 [gui]
 
@@ -32,3 +41,4 @@ theme/custom_font="res://fonts/Silver.ttf"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
