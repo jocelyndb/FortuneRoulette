@@ -1,6 +1,5 @@
 extends RigidBody2D
 
-
 @export var landed: bool = false
 
 signal just_landed

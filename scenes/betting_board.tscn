@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0s2qs18wsrli"]
+[gd_scene load_steps=4 format=3 uid="uid://c0s2qs18wsrli"]
 
 [ext_resource type="Texture2D" uid="uid://3i5d2dtrhodw" path="res://textures/board-sprite.png" id="1_8ukhv"]
+[ext_resource type="Script" path="res://scripts/bet_board.gd" id="1_jl5n2"]
 [ext_resource type="PackedScene" uid="uid://3ljd3vtqksvo" path="res://scenes/bet_area.tscn" id="2_i8sm1"]
 
 [node name="betting_board" type="Node2D"]
+script = ExtResource("1_jl5n2")
 
 [node name="board" type="Sprite2D" parent="."]
 scale = Vector2(1.6, 1.6)

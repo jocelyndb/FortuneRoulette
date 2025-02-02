@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 		if (not $ray.get_collider()): already_collided = false
 		elif (not already_collided): 
 			%roll.play()
-			print("Ticked past ", number)
+			#print("Ticked past ", number)
 			already_collided = true
-		else: print("ignoring this one!")
+		#else: print("ignoring this one!")
 	
