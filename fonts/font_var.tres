@@ -1,0 +1,14 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dmmkvtufrflo"]
+
+[sub_resource type="SystemFont" id="SystemFont_ote25"]
+font_weight = 800
+subpixel_positioning = 0
+
+[resource]
+base_font = SubResource("SystemFont_ote25")
+variation_embolden = 0.79
+variation_transform = Transform2D(0.85, 0, 0, 1.78, 0, 0)
+opentype_features = {
+1886287213: 1
+}
+baseline_offset = 0.29

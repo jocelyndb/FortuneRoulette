@@ -3,7 +3,7 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	var ball := body as RigidBody2D
 	if not ball: return
-	print("pin collision")
+	#print("pin collision")
 	if (ball.landed == false && ball.linear_velocity.length() < 5):
 		print("landing ball", self)
 		ball.landed = true

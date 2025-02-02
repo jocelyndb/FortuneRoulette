@@ -15,7 +15,11 @@ run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.00392157, 0.00392157, 0, 1)
 boot_splash/image="res://textures/Linux_command-line._Bash._GNOME_Terminal._screenshot.png"
-config/icon="res://textures/roulette-bar.png"
+config/icon="res://textures/cursor.png"
+
+[autoload]
+
+Constants="*res://scripts/constants.gd"
 
 [display]
 
@@ -40,5 +44,6 @@ theme/custom_font="res://fonts/Silver.ttf"
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

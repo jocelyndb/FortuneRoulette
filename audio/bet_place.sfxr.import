@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://qhwj2w2tqvol"
+path="res://.godot/imported/bet_place.sfxr-2d2d83f7aaa2224759c7a63d6fb762c6.sample"
+
+[deps]
+
+source_file="res://audio/bet_place.sfxr"
+dest_files=["res://.godot/imported/bet_place.sfxr-2d2d83f7aaa2224759c7a63d6fb762c6.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

@@ -2,19 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/roulette_segment.gd" id="1_kk4ek"]
 [ext_resource type="Script" path="res://scripts/pin.gd" id="2_3anps"]
-
-[sub_resource type="SystemFont" id="SystemFont_ote25"]
-font_weight = 800
-subpixel_positioning = 0
-
-[sub_resource type="FontVariation" id="FontVariation_sigxf"]
-base_font = SubResource("SystemFont_ote25")
-variation_embolden = 1.42
-variation_transform = Transform2D(0.85, 0, 0, 1.78, 0, 0)
-opentype_features = {
-1886287213: 1
-}
-baseline_offset = 0.29
+[ext_resource type="FontVariation" uid="uid://dmmkvtufrflo" path="res://fonts/font_var.tres" id="2_43qjo"]
+[ext_resource type="AudioStream" uid="uid://ddvjr113mouqc" path="res://audio/tick.sfxr" id="4_w4tsi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fgnkp"]
 radius = 0.697243
@@ -26,7 +15,7 @@ script = ExtResource("1_kk4ek")
 
 [node name="ray" type="RayCast2D" parent="."]
 unique_name_in_owner = true
-target_position = Vector2(72, 0)
+target_position = Vector2(74, 0)
 collision_mask = 2
 hit_from_inside = true
 
@@ -39,7 +28,7 @@ offset_right = 91.38
 offset_bottom = 21.75
 rotation = 1.5708
 scale = Vector2(0.32, 0.32)
-theme_override_fonts/font = SubResource("FontVariation_sigxf")
+theme_override_fonts/font = ExtResource("2_43qjo")
 theme_override_font_sizes/font_size = 28
 text = "00"
 horizontal_alignment = 1
@@ -68,6 +57,13 @@ default_color = Color(0.821789, 0.821789, 0.821789, 1)
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(50, 4, 50, 4, 0, 0)
+
+[node name="roll" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_w4tsi")
+volume_db = -11.168
+attenuation = 84.4484
+playback_type = 1
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

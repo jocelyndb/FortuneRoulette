@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://3ljd3vtqksvo"]
+
+[ext_resource type="Script" path="res://scenes/bet_area.gd" id="1_khivb"]
+[ext_resource type="AudioStream" uid="uid://qhwj2w2tqvol" path="res://audio/bet_place.sfxr" id="2_5qsd6"]
+[ext_resource type="FontVariation" uid="uid://dmmkvtufrflo" path="res://fonts/font_var.tres" id="2_gm8t7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j54k"]
+size = Vector2(14, 30)
+
+[node name="bet_area" type="Area2D"]
+script = ExtResource("1_khivb")
+
+[node name="player" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-7, 15)
+rotation = -1.5708
+stream = ExtResource("2_5qsd6")
+
+[node name="num_text" type="Label" parent="."]
+offset_left = -7.0
+offset_top = 15.0
+offset_right = 23.0
+offset_bottom = 31.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("2_gm8t7")
+theme_override_font_sizes/font_size = 13
+text = "test"
+horizontal_alignment = 1
+
+[node name="bet_collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6j54k")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

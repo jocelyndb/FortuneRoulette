@@ -19,11 +19,11 @@ func random_offset() -> Vector2:
 		randf_range(-shake_strength,shake_strength))
 
 func _on_roulette_wheel_spinning() -> void:
-	$animate.play("wheel-to-menu",-1,-1.0,true)
-	$roll.play()
+	%animate.play("menu-to-wheel")
+	#$roll.play()
 	apply_shake()
 
-func _on_roulette_wheel_stopped() -> void:
-	$animate.play("wheel-to-menu")
+func _on_roulette_wheel_stopped(stopped_on: int) -> void:
+	%animate.play("wheel-to-menu")
 	$roll.stop()
 	apply_shake()

@@ -1,0 +1,157 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0s2qs18wsrli"]
+
+[ext_resource type="Texture2D" uid="uid://3i5d2dtrhodw" path="res://textures/board-sprite.png" id="1_8ukhv"]
+[ext_resource type="PackedScene" uid="uid://3ljd3vtqksvo" path="res://scenes/bet_area.tscn" id="2_i8sm1"]
+
+[node name="betting_board" type="Node2D"]
+
+[node name="board" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_8ukhv")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+position = Vector2(7, 2)
+
+[node name="bet_area" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-96, -35)
+number = 3
+
+[node name="bet_area2" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-79, -35)
+number = 6
+
+[node name="bet_area3" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-63, -35)
+number = 9
+
+[node name="bet_area4" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-47, -35)
+number = 12
+
+[node name="bet_area5" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-31, -35)
+number = 15
+
+[node name="bet_area6" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-15, -35)
+number = 18
+
+[node name="bet_area7" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(0, -35)
+number = 21
+
+[node name="bet_area8" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(17, -35)
+number = 24
+
+[node name="bet_area9" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(33, -35)
+number = 27
+
+[node name="bet_area10" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(49, -35)
+number = 30
+
+[node name="bet_area11" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(65, -35)
+number = 33
+
+[node name="bet_area12" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(81, -35)
+number = 36
+
+[node name="bet_area13" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-96, -2)
+number = 2
+
+[node name="bet_area14" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-79, -2)
+number = 5
+
+[node name="bet_area15" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-63, -2)
+number = 8
+
+[node name="bet_area16" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-47, -2)
+number = 11
+
+[node name="bet_area17" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-31, -2)
+number = 14
+
+[node name="bet_area18" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-15, -2)
+number = 17
+
+[node name="bet_area19" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(0, -2)
+number = 20
+
+[node name="bet_area20" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(17, -2)
+number = 23
+
+[node name="bet_area21" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(33, -2)
+number = 26
+
+[node name="bet_area22" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(49, -2)
+number = 29
+
+[node name="bet_area23" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(65, -2)
+number = 32
+
+[node name="bet_area24" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(81, -2)
+number = 35
+
+[node name="bet_area25" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-96, 31)
+number = 1
+
+[node name="bet_area26" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-79, 31)
+number = 4
+
+[node name="bet_area27" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-63, 31)
+number = 7
+
+[node name="bet_area28" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-47, 31)
+number = 10
+
+[node name="bet_area29" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-31, 31)
+number = 13
+
+[node name="bet_area30" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(-15, 31)
+number = 16
+
+[node name="bet_area31" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(0, 31)
+number = 19
+
+[node name="bet_area32" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(17, 31)
+number = 22
+
+[node name="bet_area33" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(33, 31)
+number = 25
+
+[node name="bet_area34" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(49, 31)
+number = 28
+
+[node name="bet_area35" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(65, 31)
+number = 31
+
+[node name="bet_area36" parent="CanvasGroup" instance=ExtResource("2_i8sm1")]
+position = Vector2(81, 31)
+number = 34
